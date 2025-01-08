@@ -1,0 +1,855 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+
+}
+
+main,
+body {
+    height: 100%;
+
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+
+
+
+
+}
+
+body {
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+}
+
+header {
+    background: #fff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 9999;
+
+}
+
+#popup {
+    height: 80vh;
+    width: 60vw;
+    position: fixed;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    z-index: 9999;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all ease .5s;
+    border-radius: 10px;
+  
+
+}
+
+#popup .circle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    z-index: 99999;
+    top: -1%;
+    position: absolute;
+    right: -1%;
+    width: 30px;
+    border-radius: 50%;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+header.hide {
+    transform: translateY(-100%);
+    box-shadow: 0 10px 20px -2px rgba(0, 0, 0, 0.2)
+}
+
+#msg-btn {
+    position: fixed;
+    bottom: 5%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: green;
+    right: 0;
+    cursor: pointer;
+
+}
+
+#msg-btn img {
+    height: 100%;
+    width: 100%;
+}
+
+#demo {
+    height: 50px;
+    width: 180px;
+    background: linear-gradient(94.77deg, #001270 -1.95%, #bb0f30 110.44%);
+    z-index: 999;
+    cursor: pointer;
+    position: fixed;
+    /* Keeps the div fixed on the screen */
+    top: 30%;
+    /* Position it 10% down from the top of the viewport */
+    right: -5%;
+    /* Position it slightly off to the right of the viewport */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: 20px;
+    /* Rounded top-left corner */
+    border-top-right-radius: 20px;
+    /* Rounded top-right corner */
+
+    transform: rotate(-90deg);
+    /* Rotate the div by 90 degrees counterclockwise */
+    transform-origin: center;
+    /* Ensures the rotation occurs around the center of the div */
+}
+
+#demo h1 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+
+}
+
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header .nav-btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    width: 150px;
+    margin-left: 80px;
+    padding-right: 16px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(94.77deg, #001270 -1.95%, #bb0f30 110.44%);
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+    display: inline-block;
+    color: #000;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: capitalize;
+    transition: 0.2s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: linear-gradient(94.77deg, #001270 -1.95%, #F3AA1B 110.44%);
+    font-weight: 800;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+
+
+
+.page1 {
+    height: 100vh;
+    display: flex;
+    padding: 5%;
+    flex-direction: column;
+    align-items: center;
+
+    border-bottom: 1px solid #dadada;
+}
+
+.page1 .page1-heading {
+
+    height: 400px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.page1 .page1-heading h1 {
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 84.8px;
+    color: #1B1B1B;
+}
+
+.page1 .page1-heading p {
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    color: #1A6AA9;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* .counter-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+} */
+
+.counter-number {
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(94.77deg, #001270 -1.95%, #bb0f30 110.44%);
+    /* Gradient colors */
+    -webkit-background-clip: text;
+    /* Clips the gradient to the text */
+    color: transparent;
+    /* Makes the text itself transparent to show the gradient */
+}
+
+.counter-label {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #555;
+}
+
+
+
+
+.page2 {
+    min-height: 100vh;
+    padding: 5%;
+    position: relative;
+
+
+
+}
+
+.page-inner-div h1 {
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #EE9D15;
+    line-height: 1.5;
+    font-family: 'Manrope', '__Manrope_Fallback_1b340f', system-ui, sans-serif;
+}
+
+.page-inner-div p {
+    font-size: 3vw;
+    font-weight: 600;
+    color: #145180;
+    margin-top: 5px;
+}
+
+.page2 .about-us {
+
+    /* height: 60vh; */
+    padding: 50px 0px;
+
+
+
+
+}
+
+.about-us-heading {
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: 'Manrope', '__Manrope_Fallback_1b340f', system-ui, sans-serif;
+    color: #F3AA1B;
+}
+
+.about-div {
+
+    display: flex;
+    position: relative;
+    margin-top: -160px;
+}
+
+.about-div p {
+    color: rgb(95, 95, 95);
+    line-height: 30px;
+}
+
+.about-div-left {
+    width: 50%;
+    display: flex;
+    background: #F5EEFF;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    border-radius: 50px 14px 14px 14px;
+    padding-left: 40px;
+  
+
+}
+
+.page2 .about-us img {
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border-top-left-radius: 100px 100px;
+}
+
+.learn-more-btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    width: 150px;
+    text-align: center;
+
+    padding-right: 16px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+
+    background: linear-gradient(94.77deg, #001270 -1.95%, #bb0f30 110.44%);
+}
+
+.abt-div-right {
+
+
+
+    padding-left: 40px;
+
+    width: 40vw;
+    margin-top: 12%;
+    padding-top: 40px;
+    background: transparent;
+
+}
+
+.abt-div-right h1 {
+    margin: 0;
+    font-size: 2.625rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: '__Manrope_1b340f', '__Manrope_Fallback_1b340f', system-ui, sans-serif;
+    color: #001270
+}
+
+.abt-div-right p {
+    color: rgb(95, 95, 95);
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.page3 {
+
+
+
+    width: 100%;
+
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    /* Optional background */
+
+}
+
+.marquee {
+    display: flex;
+    animation: marquee-animation 20s linear infinite;
+
+}
+
+.logo {
+    margin-right: 50px;
+    /* Space between logos */
+    height: 100px;
+    /* Adjust logo size */
+    width: auto;
+
+    text-decoration: none;
+}
+
+.page4{
+    min-height: 100vh;
+    padding: 5%;
+    position: relative;
+    margin-bottom: 20px;
+
+
+}
+
+.page4 h1 {
+
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+    color: #EE9D15;
+    line-height: 1.5;
+    font-family: 'Manrope', '__Manrope_Fallback_1b340f', system-ui, sans-serif;
+
+}
+
+.page4 p,
+.page5 p {
+    font-size: 3vw;
+    font-weight: 600;
+    color: #145180;
+    margin-top: 15px;
+    margin-bottom: 50px;
+
+
+
+}
+
+.p4-div {
+    height: 70vh;
+    
+
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.page5{
+    min-height: 100%;
+    padding: 5%;
+    position: relative;
+
+}
+
+.p5-div {
+    height: 70vh;
+    
+   margin-top: -190px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.p4-div .elem ,.p5-div .elem {
+    height: 70%;
+    width: 32%;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.16);
+    border: 0px solid;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 30.4px;
+    padding-bottom: 30.4px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 50px 14px 14px 14px;
+    gap: 16px;
+    position: relative;
+}
+
+.p4-div .elem:nth-child(2) {
+    background-color: #1A6AA9;
+    /* The middle box will have a different background color */
+    margin-top: 8%;
+    color: white;
+}
+.p5-div .elem:nth-child(2) {
+    margin-top: 15%;
+}
+.p5-div .elem:nth-child(1),.p5-div .elem:nth-child(3){
+    background-color: #1A6AA9;
+    /* The middle box will have a different background color */
+    margin-top: 8%;
+    color: white;
+}
+
+.p4-div .elem:nth-child(2) p 
+{
+    color: white;
+}
+.p5-div .elem:nth-child(1) p,.p5-div .elem:nth-child(3) p{
+    color: #fff;
+}
+
+.p4-div .elem:nth-child(2) .icon {
+    background-color: #378ac9;
+}
+
+
+.p4-div .icon ,
+.p5-div .icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #378ac9;
+    width: 60px;
+
+    height: 60px;
+    border-radius: 20px 7px 7px 7px;
+    position: relative;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.p4-div .elem p,.p5-div .elem p  {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: '__Manrope_1b340f', '__Manrope_Fallback_1b340f', system-ui, sans-serif;
+    color: rgba(27, 27, 27, 0.7);
+}
+
+
+.page5 h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #EE9D15;
+    line-height: 1.5;
+    font-family: 'Manrope', '__Manrope_Fallback_1b340f', system-ui, sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+   
+}
+
+.carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.carousel div {
+    transform-style: preserve-3d;
+
+}
+
+.item {
+    display: block;
+    position: absolute;
+    background: #bdaaaa;
+    width: 250px;
+    height: 400px;
+    overflow: hidden;
+    color: #FFF;
+    border-radius: 10px;
+    border-top-left-radius: 50px;
+    transition: transform 1s;
+}
+
+.item img {
+    width: 100%;            /* Make the image fill the width of the parent */
+    height: 100%;           /* Make the image fill the height of the parent */
+    object-fit: cover;      /* Ensures the image covers the area without distortion */
+    object-position: center;/* Ensures the center of the image is shown */
+    position: absolute;     /* Absolute positioning to fill the parent */
+    top: 0;
+    left: 0;
+}
+
+
+.a {
+    transform: rotateY(0deg) translateZ(250px);
+}
+
+.a .item {
+    background: #ed1c24;
+}
+
+.b {
+    transform: rotateY(60deg) translateZ(250px) rotateY(-60deg);
+}
+
+.b .item {
+    background: #0072bc;
+}
+
+.c {
+    transform: rotateY(120deg) translateZ(250px) rotateY(-120deg);
+}
+
+.c .item {
+    background: #39b54a;
+}
+
+.d {
+    transform: rotateY(180deg) translateZ(250px) rotateY(-180deg);
+}
+
+.d .item {
+    background: #f26522;
+}
+
+.e {
+    transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
+}
+
+.e .item {
+    background: #fff;
+}
+
+.f {
+    transform: rotateY(300deg) translateZ(250px) rotateY(-300deg);
+}
+
+
+.next,
+.prev {
+    color: white;
+    position: absolute;
+    top: 100px;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: linear-gradient(94.77deg, #001270 -1.95%, #bb0f30 110.44%);
+    border-radius: 5px;
+    border-top: 1px solid #FFF;
+    box-shadow: 0 5px 0 #999;
+    transition: box-shadow 0.1s, top 0.1s;
+}
+
+.next:hover,
+.prev:hover {
+    color: #fff;
+    scale: 1.1;
+}
+
+.next:active,
+.prev:active {
+    top: 104px;
+    box-shadow: 0 1px 0 #999;
+}
+
+.next {
+    right: 5em;
+}
+
+.prev {
+    left: 5em;
+}
+
+.p5-service {
+    position: relative;
+    margin-bottom: 300px;
+    margin-top: 10%;
+}
+
+.page6{
+    position: relative;
+    
+
+}
+
+
+
+@keyframes marquee-animation {
+    0% {
+        transform: translateX(100%);
+        /* Start from right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move to left */
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+
+    #demo {
+        display: none;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+        border-right: 2px solid #000;
+    }
+
+    header #nav_check:checked~nav {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+    }
+
+    header nav ul li a {
+        margin: 5px 0;
+    }
+    .page1{
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .page1 .page1-heading h1 {
+
+        margin-top: 50px;
+        font-size: 40.8px;
+
+
+    }
+    .abt-div-right {
+       padding: 0;
+    }
+    .abt-div-right h1{
+        width: max-content;
+    }
+
+    .abt-div-right p{
+        width: 180%;
+    }
+    .page4 h1{
+        margin-top: 50px;
+        font-size: 2rem;
+    
+    }
+    .page4 p{
+      
+        font-size: 1.5rem;
+    
+    }
+    .p4-div{
+        flex-direction: column;
+        width: 100%;
+    }
+    .p4-div .elem{
+        width: auto;
+        margin-top: 20px;
+    }
+   
+    .page2 .about-us img {
+        height: 41vh;
+    }
+    .page1 .page1-heading p {
+        font-size: 40px;
+    }
+
+    .counter-container {
+
+        margin: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    .about-div {
+
+        
+        flex-direction: column;
+        width: 100%;
+      
+    }
+    .about-div-left {
+            width: 100%;
+    }
+    
+    .about-div p {
+        color: rgb(95, 95, 95);
+        line-height: 20px;
+    }
+
+
+    .page5{
+        display: none;
+    }
+    
+   
+
+}
+
