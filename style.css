@@ -59,7 +59,7 @@ header {
     transform: translate(-50%, -50%);
     transition: all ease .5s;
     border-radius: 10px;
-  
+
 
 }
 
@@ -153,10 +153,10 @@ header .logo img {
 }
 
 header .nav-btn {
-    padding-top: 12px;
-    padding-bottom: 12px;
+
     padding-left: 16px;
     width: 150px;
+
     margin-left: 80px;
     padding-right: 16px;
     font-size: 1rem;
@@ -337,7 +337,7 @@ header nav ul li a.active {
     padding-bottom: 40px;
     border-radius: 50px 14px 14px 14px;
     padding-left: 40px;
-  
+
 
 }
 
@@ -426,7 +426,7 @@ header nav ul li a.active {
     text-decoration: none;
 }
 
-.page4{
+.page4 {
     min-height: 100vh;
     padding: 5%;
     position: relative;
@@ -440,7 +440,7 @@ header nav ul li a.active {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 500;
-    
+
     color: #EE9D15;
     line-height: 1.5;
     font-family: 'Manrope', '__Manrope_Fallback_1b340f', system-ui, sans-serif;
@@ -461,7 +461,7 @@ header nav ul li a.active {
 
 .p4-div {
     height: 70vh;
-    
+
 
     display: flex;
     justify-content: space-between;
@@ -469,7 +469,7 @@ header nav ul li a.active {
 
 }
 
-.page5{
+.page5 {
     min-height: 100%;
     padding: 5%;
     position: relative;
@@ -478,15 +478,16 @@ header nav ul li a.active {
 
 .p5-div {
     height: 70vh;
-    
-   margin-top: -190px;
+
+    margin-top: -190px;
     display: flex;
     justify-content: space-between;
     position: relative;
 
 }
 
-.p4-div .elem ,.p5-div .elem {
+.p4-div .elem,
+.p5-div .elem {
     height: 70%;
     width: 32%;
 
@@ -514,21 +515,25 @@ header nav ul li a.active {
     margin-top: 8%;
     color: white;
 }
+
 .p5-div .elem:nth-child(2) {
     margin-top: 15%;
 }
-.p5-div .elem:nth-child(1),.p5-div .elem:nth-child(3){
+
+.p5-div .elem:nth-child(1),
+.p5-div .elem:nth-child(3) {
     background-color: #1A6AA9;
     /* The middle box will have a different background color */
     margin-top: 8%;
     color: white;
 }
 
-.p4-div .elem:nth-child(2) p 
-{
+.p4-div .elem:nth-child(2) p {
     color: white;
 }
-.p5-div .elem:nth-child(1) p,.p5-div .elem:nth-child(3) p{
+
+.p5-div .elem:nth-child(1) p,
+.p5-div .elem:nth-child(3) p {
     color: #fff;
 }
 
@@ -537,7 +542,7 @@ header nav ul li a.active {
 }
 
 
-.p4-div .icon ,
+.p4-div .icon,
 .p5-div .icon {
     display: -webkit-box;
     display: -webkit-flex;
@@ -562,7 +567,8 @@ header nav ul li a.active {
     justify-content: center;
 }
 
-.p4-div .elem p,.p5-div .elem p  {
+.p4-div .elem p,
+.p5-div .elem p {
     margin: 0;
     font-size: 1rem;
     font-weight: 500;
@@ -587,7 +593,7 @@ header nav ul li a.active {
     height: 200px;
     position: relative;
     perspective: 1000px;
-   
+
 }
 
 .carousel {
@@ -617,11 +623,16 @@ header nav ul li a.active {
 }
 
 .item img {
-    width: 100%;            /* Make the image fill the width of the parent */
-    height: 100%;           /* Make the image fill the height of the parent */
-    object-fit: cover;      /* Ensures the image covers the area without distortion */
-    object-position: center;/* Ensures the center of the image is shown */
-    position: absolute;     /* Absolute positioning to fill the parent */
+    width: 100%;
+    /* Make the image fill the width of the parent */
+    height: 100%;
+    /* Make the image fill the height of the parent */
+    object-fit: cover;
+    /* Ensures the image covers the area without distortion */
+    object-position: center;
+    /* Ensures the center of the image is shown */
+    position: absolute;
+    /* Absolute positioning to fill the parent */
     top: 0;
     left: 0;
 }
@@ -677,10 +688,10 @@ header nav ul li a.active {
     color: white;
     position: absolute;
     top: 100px;
-    padding: 1em 2em;
+    padding: 10px 40px;
     cursor: pointer;
     background: linear-gradient(94.77deg, #001270 -1.95%, #bb0f30 110.44%);
-    border-radius: 5px;
+    border-radius: 50px;
     border-top: 1px solid #FFF;
     box-shadow: 0 5px 0 #999;
     transition: box-shadow 0.1s, top 0.1s;
@@ -712,11 +723,166 @@ header nav ul li a.active {
     margin-top: 10%;
 }
 
-.page6{
+
+.p6-carousel-container {
     position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    cursor: grab;
+    margin-bottom: 20px;
+   
+}
+
+.p6-carousel {
+    display: flex;
+    background-color: #000;
+    transition: transform 0.5s ease-in-out;
+}
+
+.p6-carousel-item {
+    display: flex;
+    width: 100vw;
     
+    flex-shrink: 0;
+  
+    padding-bottom: 20px;
 
 }
+
+.project-content {
+    display: flex;
+    width: 100%;
+
+    padding-top: 80px;
+    padding-left: 80px;
+}
+
+.project-content button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    cursor: pointer;
+
+
+    vertical-align: middle;
+
+    text-decoration: none;
+
+    font-family: 'Manrope', '__Manrope_Fallback_1b340f', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+
+    text-transform: uppercase;
+    min-width: 64px;
+    padding: 6px 16px;
+    border: 0;
+    border-radius: 8px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    margin-top: 20px;
+    box-shadow: none;
+    text-transform: unset;
+    color: linear-gradient(#001270, #bb0f30);
+
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: #fff;
+    border-radius: 800px;
+}
+
+.project-details {
+    width: 50%;
+    color: #fff;
+
+}
+
+.project-title {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.project-type {
+    font-size: 1.5rem;
+}
+
+.project-number {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.tech-stack {
+    margin-top: 20px;
+ 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+   
+
+}
+
+.chip {
+    background-color: rgba(0, 0, 0, 0.336);
+
+    color: white;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin-right: 25px;
+    
+    border-radius: 10px;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin-top: 40px;
+    padding-right: 30px;
+}
+
+.project-image {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.video-div {
+    position: absolute;
+    top: 42px;       /* Position the video at the screen location of the laptop */
+    left: 85px; 
+    width: 475px;
+         /* Adjust the left position to align with the screen area */
+     /* Set the width of the video (screen size) */
+    height: 320px;    /* Set the height of the video (screen size) */
+    z-index: 1; 
+         /* Make sure the video appears above the image */
+}
+.video-div video {
+    border-radius: 10px;
+    width: 100%;      /* Make the video fill the div */
+    height: 100%;     /* Make the video fill the div */
+    object-fit: cover;/* Ensure the video fills the screen area proportionally */
+}
+
+
 
 
 
@@ -773,7 +939,8 @@ header nav ul li a.active {
     header nav ul li a {
         margin: 5px 0;
     }
-    .page1{
+
+    .page1 {
         height: auto;
         align-items: flex-start;
     }
@@ -785,38 +952,46 @@ header nav ul li a.active {
 
 
     }
+
     .abt-div-right {
-       padding: 0;
+        padding: 0;
     }
-    .abt-div-right h1{
+
+    .abt-div-right h1 {
+        font-size: 32px;
         width: max-content;
     }
 
-    .abt-div-right p{
+    .abt-div-right p {
         width: 180%;
     }
-    .page4 h1{
+
+    .page4 h1 {
         margin-top: 50px;
         font-size: 2rem;
-    
+
     }
-    .page4 p{
-      
+
+    .page4 p {
+
         font-size: 1.5rem;
-    
+
     }
-    .p4-div{
+
+    .p4-div {
         flex-direction: column;
         width: 100%;
     }
-    .p4-div .elem{
+
+    .p4-div .elem {
         width: auto;
         margin-top: 20px;
     }
-   
+
     .page2 .about-us img {
         height: 41vh;
     }
+
     .page1 .page1-heading p {
         font-size: 40px;
     }
@@ -828,28 +1003,50 @@ header nav ul li a.active {
         flex-wrap: wrap;
 
     }
+
     .about-div {
 
-        
+
         flex-direction: column;
         width: 100%;
-      
+
     }
+
     .about-div-left {
-            width: 100%;
+        width: 100%;
     }
-    
+
     .about-div p {
         color: rgb(95, 95, 95);
         line-height: 20px;
     }
 
 
-    .page5{
+    .page5 {
         display: none;
     }
-    
-   
+
+    .page6 {
+        margin-top: 700px
+    }
+
+    .p6-carousel-item {
+        flex-direction: column;
+    }
+
+    .p6-left,
+    .p6-right {
+        width: 100%;
+    }
+
+    .p6-left {
+        align-items: flex-start;
+    }
+
+    .p6-right img {
+        width: 100%;
+        height: auto;
+    }
+
 
 }
-
