@@ -187,7 +187,6 @@ function page6Animation() {
     carousel.style.backgroundColor = colors[currentIndex % colors.length];
   }
 }
-
 document.addEventListener('DOMContentLoaded', function () {
   // Register Draggable Plugin
   gsap.registerPlugin(Draggable);
@@ -202,47 +201,74 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to change background color based on the current index
   function changeBackgroundColor(index) {
-    const colors = ['#121212', '#00A76E', '#264D82', '#A26A9F', '#A26A9F']; // Example colors
-    const color = colors[index % colors.length]; // Cycle through colors
-    body.style.backgroundColor = color; // Change background color of the body
+      const colors = ['#121212', '#00A76E', '#264D82', '#A26A9F', '#264D7F','#04777','#1B9842']; // Example colors
+      const color = colors[index % colors.length]; // Cycle through colors
+      body.style.backgroundColor = color; // Change background color of the body
+  }
+
+  // Pause all videos except the current one
+  function pauseOtherVideos() {
+      const allVideos = document.querySelectorAll('.carousel-video');
+      allVideos.forEach((video, index) => {
+          if (index !== currentIndex) {
+              video.pause();
+              video.muted = true; // Mute the other videos when they are not active
+          }
+      });
+  }
+
+  // Play the current video and unmute it
+  function playCurrentVideo() {
+      const currentVideo = carouselItems[currentIndex].querySelector('.carousel-video');
+      currentVideo.play();
+      currentVideo.muted = false; // Unmute the video when it is the active one
   }
 
   // Make the carousel draggable
   Draggable.create(carousel, {
-    type: "x",
-    edgeResistance: 0.9,
-    bounds: {
-      minX: -itemWidth * (totalItems - 1), // Limit dragging to the total number of items
-      maxX: 0 // Don't drag beyond the first item
-    },
-    inertia: true,
-    onDrag: function () {
-      const distanceDragged = Math.abs(this.x); // Distance dragged in x direction
-      const itemIndex = Math.round(distanceDragged / itemWidth); // Calculate the index based on drag distance
-      currentIndex = itemIndex;
-      updateCarouselPosition(); // Update the position of carousel based on drag
-      changeBackgroundColor(currentIndex); // Change background color when drag occurs
-    },
-    onThrowComplete: function () {
-      const distanceDragged = Math.abs(this.x);
-      const itemIndex = Math.round(distanceDragged / itemWidth);
-      currentIndex = itemIndex;
-      updateCarouselPosition(); // Update the position after dragging ends
-      changeBackgroundColor(currentIndex); // Change background color after throw complete
-    }
+      type: "x",
+      
+  
+      bounds: {
+          minX: -itemWidth * (totalItems - 1), // Limit dragging to the total number of items
+          maxX: 0 
+      },
+      inertia: true,
+      onDrag: function () {
+          const distanceDragged = Math.abs(this.x); // Distance dragged in x direction
+          const itemIndex = Math.round(distanceDragged / itemWidth); // Calculate the index based on drag distance
+          currentIndex = itemIndex;
+          updateCarouselPosition(); 
+        
+          changeBackgroundColor(currentIndex); // Change background color when drag occurs
+      },
+      onThrowComplete: function () {
+          const distanceDragged = Math.abs(this.x);
+          const itemIndex = Math.round(distanceDragged / itemWidth);
+          currentIndex = itemIndex;
+          updateCarouselPosition(); // Update the position after dragging ends
+          changeBackgroundColor(currentIndex); // Change background color after throw complete
+      }
   });
 
   // Function to update the carousel position smoothly
   function updateCarouselPosition() {
-    const targetPosition = -currentIndex * itemWidth;
-    gsap.to(carousel, {
-      x: targetPosition,
-      duration: 0.2, // Smooth transition duration
-      ease: "power1.out"
-    });
+      const targetPosition = -currentIndex * itemWidth;
+      gsap.to(carousel, {
+          x: targetPosition,
+          duration: 0.3, // Smooth transition duration
+          ease: "power1.out",
+          onComplete: function () {
+              pauseOtherVideos(); // Pause videos of other carousel items
+              playCurrentVideo(); // Play the current carousel item video
+          }
+      });
   }
-});
 
+  // Ensure only the current video is playing and others are paused
+  pauseOtherVideos(); // Initially pause all videos
+  playCurrentVideo(); // Play the first video
+});
 
 
 

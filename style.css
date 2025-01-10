@@ -730,7 +730,7 @@ header nav ul li a.active {
     overflow: hidden;
     cursor: grab;
     margin-bottom: 20px;
-   
+
 }
 
 .p6-carousel {
@@ -742,9 +742,9 @@ header nav ul li a.active {
 .p6-carousel-item {
     display: flex;
     width: 100vw;
-    
+
     flex-shrink: 0;
-  
+
     padding-bottom: 20px;
 
 }
@@ -828,11 +828,11 @@ header nav ul li a.active {
 
 .tech-stack {
     margin-top: 20px;
- 
+
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-   
+
 
 }
 
@@ -843,7 +843,7 @@ header nav ul li a.active {
     padding: 10px 20px;
     font-size: 12px;
     margin-right: 25px;
-    
+
     border-radius: 10px;
 }
 
@@ -864,24 +864,37 @@ header nav ul li a.active {
     height: auto;
     object-fit: cover;
 }
+
 .video-div {
     position: absolute;
-    top: 42px;       /* Position the video at the screen location of the laptop */
-    left: 85px; 
+    top: 42px;
+    /* Position the video at the screen location of the laptop */
+    left: 85px;
     width: 475px;
-         /* Adjust the left position to align with the screen area */
-     /* Set the width of the video (screen size) */
-    height: 320px;    /* Set the height of the video (screen size) */
-    z-index: 1; 
-         /* Make sure the video appears above the image */
-}
-.video-div video {
-    border-radius: 10px;
-    width: 100%;      /* Make the video fill the div */
-    height: 100%;     /* Make the video fill the div */
-    object-fit: cover;/* Ensure the video fills the screen area proportionally */
+    /* Adjust the left position to align with the screen area */
+    /* Set the width of the video (screen size) */
+    height: 320px;
+    /* Set the height of the video (screen size) */
+    z-index: 1;
+    /* Make sure the video appears above the image */
 }
 
+.video-div video {
+    border-radius: 10px;
+    width: 100%;
+    /* Make the video fill the div */
+    height: 100%;
+    /* Make the video fill the div */
+    object-fit: cover;
+    /* Ensure the video fills the screen area proportionally */
+}
+
+.page7{
+    height: 100vh;
+    padding: 5%;
+    position: relative;
+
+}
 
 
 
@@ -1047,6 +1060,53 @@ header nav ul li a.active {
         width: 100%;
         height: auto;
     }
+    .project-content{
+        flex-direction: column;
+        padding: 20px;
+         
+    }
+    .page4{
+        margin-bottom: 600px;
+    }
+    .project-title{
+        font-size: 25px;
+        width: 300px;
+        
+    }
+    .project-type {
+        width: max-content;
+    }
+    .tech-stack {
+        margin-top: 20px;
+        display: flex ;
+        flex-wrap: wrap;
+        gap: 5px;
+        width: 350px;
+    }
+    .project-image img {
+        display: none;
+    }
+
+    .project-description {
+        width: 350px;
+    }
+    .p6-carousel-item{
+        min-height: 140vh;
+    }
+    .video-div {
+        /* position: absolute; */
+        /* top: 42px; */
+        /* left: 85px; */
+        width:300px;
+        height: 150px;
+        z-index: 1;
+        top: 10;
+        left: 0;
+       
+    }
+
+ 
+    
 
 
 }
