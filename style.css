@@ -18,14 +18,11 @@ body {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
 
-
-
-
 }
 
 body {
     scrollbar-width: thin;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 
 }
 
@@ -97,6 +94,20 @@ header.hide {
     right: 0;
     cursor: pointer;
 
+}
+
+.cursor {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    pointer-events: none;
+    z-index: 999999999;
 }
 
 #msg-btn img {
@@ -377,6 +388,20 @@ header nav ul li a.active {
     background: transparent;
 
 }
+
+
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .abt-div-right h1 {
     margin: 0;
@@ -889,7 +914,7 @@ header nav ul li a.active {
     /* Ensure the video fills the screen area proportionally */
 }
 
-.page7{
+.page7 {
     height: 100vh;
     padding: 5%;
     position: relative;
@@ -1060,29 +1085,35 @@ header nav ul li a.active {
         width: 100%;
         height: auto;
     }
-    .project-content{
+
+    .project-content {
         flex-direction: column;
         padding: 20px;
-         
+
     }
-    .page4{
+
+    .page4 {
         margin-bottom: 600px;
     }
-    .project-title{
+
+    .project-title {
         font-size: 25px;
         width: 300px;
-        
+
     }
+
     .project-type {
         width: max-content;
     }
+
     .tech-stack {
         margin-top: 20px;
-        display: flex ;
+        display: flex;
         flex-wrap: wrap;
         gap: 5px;
         width: 350px;
     }
+
     .project-image img {
         display: none;
     }
@@ -1090,23 +1121,25 @@ header nav ul li a.active {
     .project-description {
         width: 350px;
     }
-    .p6-carousel-item{
+
+    .p6-carousel-item {
         min-height: 140vh;
     }
+
     .video-div {
         /* position: absolute; */
         /* top: 42px; */
         /* left: 85px; */
-        width:300px;
+        width: 300px;
         height: 150px;
         z-index: 1;
         top: 10;
         left: 0;
-       
+
     }
 
- 
-    
+
+
 
 
 }

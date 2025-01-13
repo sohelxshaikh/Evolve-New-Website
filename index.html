@@ -11,12 +11,12 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about_us.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/Draggable.min.js"></script>
 
 </head>
-
 
 
 <body>
@@ -30,6 +30,7 @@
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         <!-- Calendly inline widget end -->
     </div>
+    <div class="cursor"></div>
 
     <main class="locomotive">
 
@@ -39,6 +40,10 @@
         <div id="msg-btn">
             <a href=""> <img src="./images/whatsapp.png" alt=""></a>
         </div>
+
+        <div class="loader" id="loader"></div>
+
+
         <header>
             <div class="logo">
                 <img src="images/logo.jpg" alt="Logo">
@@ -47,12 +52,12 @@
             <nav>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
                     <li><a href="#">Industries</a></li>
-                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Services</a></li>
                     <li><a href="#">Career</a></li>
-                    <button class="nav-btn">Contact Us</button>
+                    <button class="nav-btn"><a href="#contact"  style="color: aliceblue;">Contact Us</a></button>
                 </ul>
             </nav>
             <label for="nav_check" class="hamburger">
@@ -61,6 +66,8 @@
                 <div></div>
             </label>
         </header>
+
+
         <div class="page1">
             <div class="page1-heading">
                 <h1>Creating Innovative</h1>
@@ -362,8 +369,8 @@
                             <div class="project-image">
                                 <img src="./images/bitten_music.png" alt="Project Image">
                                 <div class="video-div">
-                                    <video id="video"  src="./videos/grivi.mp4" controls width="100%"
-                                        height="100%" muted autoplay loop></video>
+                                    <video id="video" src="./videos/grivi.mp4" controls width="100%" height="100%" muted
+                                        autoplay loop></video>
                                 </div>
                             </div>
                         </div>
@@ -420,7 +427,7 @@
                                     <span class="chip">Student Management</span>
                                     <span class="chip">Batch Formation</span>
                                     <span class="chip">Report Management</span>
-                                  
+
                                 </div>
                                 <p class="project-description">
                                     The Institute Management System is the total management system. It is an institute
@@ -460,7 +467,7 @@
                                     <span class="chip">Student Management</span>
                                     <span class="chip">Batch Formation</span>
                                     <span class="chip">Report Management</span>
-                                  
+
                                 </div>
                                 <p class="project-description">
                                     The Institute Management System is the total management system. It is an institute
@@ -500,7 +507,7 @@
                                     <span class="chip">Student Management</span>
                                     <span class="chip">Batch Formation</span>
                                     <span class="chip">Report Management</span>
-                                  
+
                                 </div>
                                 <p class="project-description">
                                     The Institute Management System is the total management system. It is an institute
@@ -533,10 +540,248 @@
             </div>
         </section>
 
-        <div class="page7">
-            <h1>From Concept to Launch</h1>
-            <p>How We Bring Your <br> Vision to Life</p>
+        <div id="contact" class="footer">
+            <div class="footer-container">
+                <div class="contact-left">
+                    <h3>CONTACT US</h3>
+                    <h2>We're Just a Call or Email Away</h2>
+                    <p>
+                        <i class="fas fa-phone-alt"></i>
+                        <span style="
+                        margin-left: -10px;
+                        margin-right: 10px;
+                        font-size: 1.6rem;
+                        margin-top: -5px;
+                      ">
+                            |</span>
+                        Tel. 07272-428012, 07272-403168<br />
+
+                        Mob.+91-9926877335
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i><span style="
+                        margin-left: -10px;
+                        margin-right: 10px;
+                        font-size: 1.6rem;
+                        margin-top: -5px;
+                      ">
+                            |</span>
+                        evolve.webinfotech@gmail.com
+                    </p>
+                    <p>
+                        <i class="fab fa-skype"></i>
+                        <span style="
+                        margin-left: -10px;
+                        margin-right: 10px;
+                        font-size: 1.6rem;
+                        margin-top: -5px;
+                      ">
+                            |</span>live:.cid.66efacfe86f877da
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span style="
+                        margin-left: -10px;
+                        margin-right: 10px;
+                        font-size: 1.6rem;
+                        margin-top: -5px;
+                      ">
+                            |</span>
+                        314-Tarani Colony 2nd Floor,Above Domino's A.B Road Dewas-455001(M.P)
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-right bg-light">
+                    <h2>LET'S START THE CONVERSATION</h2>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="name">Name</label>
+                                <input class="bg-light" type="text" id="name" name="name"
+                                    placeholder="Enter your name" />
+                            </div>
+                            <div class="form-group half">
+                                <label for="phone">Phone Number</label>
+                                <input id="phone" class="bg-light" type="tel" name="phone" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="useremail">Email Address</label> <br />
+                            <input class="bg-light" type="email" name="useremail" placeholder="Enter Your Email Address"
+                                value="" style="
+                          width: 100%;
+                          border-top: none;
+                          border-right: none;
+                          border-left: none;
+                          border-bottom: 2px solid rgb(205, 193, 193);
+                        " />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="services">Services?</label>
+                                <select id="services" class="bg-light" name="services">
+                                    <option value="">What are you looking for?</option>
+                                    <option value="web-design">Web Design</option>
+                                    <option value="app-development">App Development</option>
+                                </select>
+                            </div>
+                            <div class="form-group half">
+                                <label for="budget">Budget?</label>
+                                <select id="budget" class="bg-light" name="budget">
+                                    <option value="">Select your budget</option>
+                                    <option value="1000">Below $1000</option>
+                                    <option value="1000-5000">$1000 - $5000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="requirements">Describe your Requirements</label>
+                            <textarea name="topic" id="topic" placeholder="Describe your Requirements" maxlength="1000"
+                                style="height: 45px; overflow: hidden"></textarea>
+
+                            <p class="MuiFormHelperText-root mui-1071m2v">0<!-- -->/1000</p>
+                        </div>
+                        <div class="form-group checkbox">
+                            <!-- <input type="checkbox" id="agree" name="agree"> -->
+                            <input type="checkbox" style="width: 30px" /><label for="checkbox">
+                                I agree with <a href="#">Privacy Policy</a> &
+                                <a href="#">Terms and Conditions</a>.</label>
+                        </div>
+                        <button type="send" class="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+            <div class="d-flex align-items-center border-top text-black" style="
+              justify-content: space-between;
+              font-size: 20px;
+              font-weight: 500;
+              padding: 5px 20px;
+            ">
+
+
+            </div>
+            <div class="custom-footer-container bg-dark py-5 border-top text-white p-3">
+                <footer class="footer-row">
+                    <!-- Logo and Descriptive Text -->
+                    <div class="footer-logo-description col-lg-3 col-md-4 col-sm-12 mb-3">
+                        <a href="/" class="logo-link d-flex align-items-center mb-3 text-decoration-none">
+                            <img src="./images/logo.jpg" alt="Evolve" class="footer-logo img-fluid" />
+                        </a>
+                        <p class="footer-description text-white">
+                            Delivering excellence in software development with innovation and precision backed by more
+                            than two decades of expertise.
+                        </p>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="footer-company-links col-lg-2 col-md-3 col-sm-12 mb-3">
+                        <h5>Company</h5>
+                        <ul class="footer-nav">
+                            <li class="footer-nav-item mb-2">
+                                <a href="#" class="footer-nav-link text-white">About Us</a>
+                            </li>
+                            <li class="footer-nav-item mb-2">
+                                <a href="#" class="footer-nav-link text-white">Life @ Evolve</a>
+                            </li>
+                            <li class="footer-nav-item mb-2">
+                                <a href="#" class="footer-nav-link text-white">Careers</a>
+                            </li>
+                            <li class="footer-nav-item mb-2">
+                                <a href="#" class="footer-nav-link text-white">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Services Section -->
+                    <div class="footer-services col-lg-5 col-md-5 col-sm-12 mb-3">
+                        <h5>Services</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="footer-services-list">
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">Web Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">Mobile Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">UI/UX Design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">AI / ML Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">Blockchain Development</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="footer-services-list">
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">IoT Development</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">Data Analytics &
+                                            Visualization</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">Digital Marketing</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">VOIP Testing</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer-service-link text-white">DevOps</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Section -->
+                    <div class="footer-other col-lg-2 col-md-3 col-sm-12 mb-3">
+                        <h5>Other</h5>
+                        <ul class="footer-nav">
+                            <li class="footer-nav-item mb-2">
+                                <a href="#" class="footer-nav-link text-white">Industries</a>
+                            </li>
+                            <li class="footer-nav-item mb-2">
+                                <a href="#" class="footer-nav-link text-white">Portfolio</a>
+                            </li>
+                            <li class="footer-nav-item mb-2">
+                                <a href="#" class="footer-nav-link text-white">Blogs</a>
+                            </li>
+                            <li class="footer-nav-item mb-2">
+                                <a href="#" class="footer-nav-link text-white">Case Studies</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </footer>
+
+            </div>
+
+            <div class="f-bottom">
+                <div class="footer-right">
+                    <a href="/privacy-policy" class="privacy">Privacy Policy</a> •
+                    <a href="/terms-of-use">Terms of Use</a>
+                </div>
+                <p class="mb-0 copyright-text">
+                    © 2025 Evolve webinfotech All Rights Reserved.
+                </p>
+            </div>
         </div>
+
 
 
 
