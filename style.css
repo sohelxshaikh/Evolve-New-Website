@@ -1111,9 +1111,19 @@ header nav ul li a.active {
         left: 0;
 
     }
+    .map iframe{
+        width: 400px;
+        height:500px ;
+    }
 
 
 
 
 
 }
+
+
+
+    nav a {
+        text-decoration: none;
+    }
